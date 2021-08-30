@@ -1,0 +1,23 @@
+$web-font-family: "Roboto" !default;
+$web-font-path: "@/../../fonts" !default;
+
+@font-face {
+    font-family: '#{$web-font-family}';
+    font-weight: 400;
+    font-display: swap;
+    src: url('#{$web-font-path}/roboto-regular-webfont.woff2') format('woff2'),
+}
+
+@font-face {
+    font-family: '#{$web-font-family}';
+    font-weight: 500;
+    font-display: swap;
+    src: url('#{$web-font-path}/roboto-medium-webfont.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: '#{$web-font-family}';
+    font-weight: 700;
+    font-display: swap;
+    src: url('#{$web-font-path}/roboto-bold-webfont.woff2') format('woff2');
+}

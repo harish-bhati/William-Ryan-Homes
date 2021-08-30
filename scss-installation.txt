@@ -1,0 +1,24 @@
+1. vue installation
+    https://v3.vuejs.org/guide/installation.html#cli
+    -> install vue
+    $ npm install vue@next
+    -> install vue cli
+    npm install -g @vue/cli
+    create vue project dir
+     ->vue create wrh-buyer
+2. vue js scss install
+https://vue-loader.vuejs.org/guide/pre-processors.html#sass-vs-scss
+npm i sass-loader@10 node-sass
+
+3.For loading a variable scss file globaly
+-> Create vue.config.js
+-> add below code in those file
+  module.exports = {
+css: {
+loaderOptions: {
+sass: {
+additionalData: `@import "@/scss/_variable.scss";`
+},
+},
+},
+};

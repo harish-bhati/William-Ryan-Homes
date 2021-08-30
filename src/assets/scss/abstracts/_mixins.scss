@@ -1,0 +1,93 @@
+$imagedir:'~@/assets/images/';
+
+@mixin bgImage($filename, $position:center, $repeat: no-repeat) {
+  background: transparent url(#{$imagedir}#{$filename}) $repeat $position;
+}
+@mixin font_size_color($color: null, $font-size: null, $font_weight: null, $line_height: null) {
+    @if $color != null{
+      color: $color;
+    }
+    @if $font-size != null{
+      font-size: $font;
+    }
+    @if $font_weight != null{
+      font-weight: $font_weight;
+    }
+    @if $line_height != null{
+      line-height: $line_height;
+    }
+}
+@mixin flex ($flex: null, $justify:null, $align_item:null, $wrap:null,$gap:null, $direction:null) {
+    @if $flex !=null {
+      display: $flex;
+    }
+    @if $justify != null{
+      justify-content: $justify;
+    }
+    @if $align_item != null{
+      align-items: $align_item;
+    }
+    @if $wrap != null{
+      flex-wrap: $wrap;
+    }
+    @if $gap != null{
+        gap: $gap;
+    }
+    @if $direction != null{
+      flex-direction: $direction;
+    }
+}
+@mixin grid ($grid: null, $justify:null, $align_item:null, $column:null, $rows:null, $gap:null) {
+    @if $grid !=null {
+      display: $grid;
+    }
+    @if $justify != null{
+      justify-content: $justify;
+    }
+    @if $align_item != null{
+      align-items: $align_item;
+    }
+    @if $column != null{
+        grid-template-columns: $columns;
+    }
+    @if $rows != null{
+        grid-template-rows: $rows;
+    }
+    @if $gap != null{
+        grid-gap: $gap;
+    }
+}
+@mixin grid-column ($col-start, $col-end){
+    grid-column: #{$col-start} / #{$col-end};
+}
+@mixin grid-row ($row-start, $row-end){
+    grid-row: #{$row-start} / #{$row-end};
+}
+@mixin width_height_bg($width: null, $height: null, $bg: null) {
+    @if $width != null{
+      height: $width;
+    }
+    @if $height != null{
+      width: $height;
+    }
+    @if $bg != null{
+      background-color: $bg;
+    }
+}
+@mixin btn_style($bg_color: null, $border: null, $box_shadow: null, $border_radius: null, $color: null) {
+    @if $bg_color != null{
+      background: $bg_color;
+    }
+    @if $border != null{
+      border: $border;
+    }
+    @if $box_shadow != null{
+      box-shadow: $box_shadow;
+    }
+    @if $border_radius != null{
+      border-radius: $border_radius;
+    }
+    @if $color != null{
+      color: $color;
+    }
+}

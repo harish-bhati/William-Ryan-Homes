@@ -1,0 +1,88 @@
+%large-btn{
+    font: 500 1rem/1.42 $web-font-family, arial;
+    padding: .714rem 1.142rem;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:focus {
+        outline: none;
+    }
+}
+%small-btn{
+    font: 500 1rem/1.42 $web-font-family, arial;
+    padding: .428rem 1.142rem;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:focus {
+        outline: none;
+    }
+}
+%tiny-btn{
+    font: 500 .857rem/1.14 $web-font-family, arial;
+    padding: .214rem .714rem;
+    max-width: 100%;
+    width: auto;
+    cursor: pointer;
+    white-space: nowrap;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+@mixin btn($bg-color) {
+    @if $bg-color == btn-blue{
+        background: $light-blue;
+        border: 1px solid $light-blue;
+        color: $white;
+        border-radius: $input-radius;
+        @extend %small-btn;
+    }
+    @if $bg-color == btn-green{
+        background: $green;
+        border: 1px solid $green;
+        color: $white;
+        border-radius: $input-radius;
+        @extend %large-btn;
+    }
+    @if $bg-color == btn-outline-blue{
+        background: $white;
+        border: 1px solid $light-blue;
+        color: $light-blue;
+        border-radius: $input-radius;
+        @extend %large-btn;
+    }
+    @if $bg-color == btn-outline-blue-small{
+        background: $white;
+        border: 1px solid $light-blue;
+        color: $light-blue;
+        border-radius: $input-radius;
+        @extend %small-btn;
+    }
+    @if $bg-color == btn-oval-green{
+        background: $green;
+        border: 1px solid $green;
+        color: $light-blue;
+        border-radius: $oval-radius;
+        @extend %tiny-btn;
+    }
+    @if $bg-color == btn-oval-white{
+        background: $white;
+        border: 1px solid $dark-grey;
+        color: $dark-grey;
+        border-radius: $oval-radius;
+        @extend %tiny-btn;
+    }
+    @if $bg-color == btn-oval-blue{
+        background: $light-blue;
+        border: 1px solid $light-blue;
+        color: $white;
+        border-radius: $oval-radius;
+        @extend %tiny-btn;
+    }
+}
