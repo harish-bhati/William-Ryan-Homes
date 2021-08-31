@@ -1,0 +1,25 @@
+@import "../abstracts/mixins";
+@import "../abstracts/_variable.scss";
+footer{
+    @include width_height_bg($width: 100%, $height: null, $bg: $dark-blue); 
+    color: $white;
+    padding: 16px;
+    grid-column: 2/3;
+    grid-row: 3/4;
+    p{
+        font-size: 11px;
+    }
+}
+.footer_logo_link{
+    @include flex (flex,space-between,null,nowrap,24px,null);
+    margin-bottom: 8px;
+   
+    .footer_item{
+        @include flex (flex,space-between,null,nowrap,24px,null);
+
+    &__link{
+        color: $white;
+    }
+
+}
+}

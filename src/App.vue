@@ -1,17 +1,18 @@
 <template>
-  <HelloWorld msg="Welcome to hello world"/>
-  <Header />
+  <Dashboard/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Header from './components/Header.vue'
+
+
+import Dashboard from '../src/components/Dashboard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    Header
+    
+
+    Dashboard
   }
 }
 </script>

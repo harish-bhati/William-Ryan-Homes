@@ -1,0 +1,38 @@
+
+.wrh_logo__img{
+  height: 40px;
+}
+aside{
+ @include width_height_bg(220px,100vh,$white);
+ box-shadow: $shadow;
+ padding: 32px 16px;
+ grid-column: 1/2;
+ grid-row: 1/4;
+ position: fixed;
+}
+nav{
+    width: 100%;
+    margin-top: 60px;
+    
+}
+.nav_list{
+  @include flex (flex,center,null,nowrap,24px,column);
+  
+    .list_item{           
+            &__link{                            
+              color: $light-blue;
+              border-radius: $input-radius;
+              display: block;
+              font-size: 16px;
+              padding: 11px 16px;
+              &:hover{
+                @include width_height_bg(100%,null,$dark-blue) ;                
+                color: $white;
+               }
+            }
+            .active{
+                @include width_height_bg(100%,null,$dark-blue) ;                
+                color: $white;
+               }
+    }
+}

@@ -1,0 +1,24 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+header{
+    @include flex (flex,space-between,center,nowrap,24px,null);
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 36px 40px;
+.selected_nav{
+    color: $dark-blue;
+    font-size: 40px;
+    line-height: 32px;
+}
+.user_name{
+    @include flex (flex,space-between,center,nowrap,24px,null);
+}
+.user_symbol{
+@include width_height_bg(40px, 40px, $light-blue);   
+@include flex (flex,center,center,nowrap,null,null); 
+border-radius: $circle;
+color: $white;
+font-size: 20px;
+}
+}

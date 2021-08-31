@@ -1,8 +1,13 @@
 <template>
-<div class="wr__flex">
-    <div class="wr__flex-2">Item 1</div>
-    <div class="wr__flex-2">Item 2</div>
-</div>
+<header>
+  <div class="selected_nav">
+    Dashboard
+  </div>
+  <div class="user_name">
+    <div class="user_symbol">JT</div>
+    John Thomas
+  </div>
+</header>
 </template>
 
 <script>
@@ -10,8 +15,8 @@ export default {
     name: 'Header'
 }
 </script>
+
 <style lang="scss">
-.wr__flex{
-    @include flex(flex,center,center);
-}
+
 </style>
+
